@@ -1,0 +1,46 @@
+#Vector_23 {
+  transform-origin: 100% -10px;
+  transform: rotate(0deg);
+  animation: hand 1s infinite;
+}
+
+@keyframes hand {
+  0% {
+    transform: rotate(0deg);
+  }
+  20% {
+    transform: rotate(0.5deg);
+  }
+  50% {
+    transform: rotate(1deg);
+  }
+  70% {
+    transform: rotate(0.5deg);
+  }
+  100% {
+    ransform: rotate(0deg);
+  }
+}
+
+#Vectore {
+  transform-origin: 50% 0%;
+  transform: rotate(0deg);
+  animation: right 2s infinite;
+}
+@keyframes right {
+  0% {
+    transform: rotate(0deg);
+  }
+  20% {
+    transform: rotate(2deg);
+  }
+  50% {
+    transform: rotate(4deg);
+  }
+  70% {
+    transform: rotate(2deg);
+  }
+  100% {
+    ransform: rotate(0deg);
+  }
+}

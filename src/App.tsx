@@ -1,14 +1,11 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
-import { Container } from "./components/module/Containers";
 import Navigation from "./components/Header/Navigation";
-import { Route, Switch } from "react-router";
-import Home from "./components/section/Home";
-import About from "./components/section/About";
-import Skills from "./components/section/Skills";
-import Gallery from "./components/section/Gallery";
-import Contact from "./components/section/Contact";
+import Home from "./components/section/Home/Home";
+import About from "./components/section/About/About";
+import Skills from "./components/section/Skills/Skills";
+import Gallery from "./components/section/Gallery/Gallery";
+import Contact from "./components/section/Contact/Contact";
 import ScrollToTop from "./components/scrollToTop";
 
 function App() {
@@ -25,6 +22,9 @@ function App() {
 
       <Home id="/home" />
       <About id="/about" />
+      <Skills id="/skills" />
+      <Gallery id="/gallery" />
+      <Contact id="/contact" />
     </>
   );
 }
