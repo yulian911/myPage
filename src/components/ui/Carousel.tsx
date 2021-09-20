@@ -8,41 +8,37 @@ const Carousel = () => {
   const [currImg, setCurrImg] = useState<number>(4);
 
   return (
-    <CarouselContent>
-      <CarouselBox>
-        <CarouselInner
-          style={{ backgroundImage: `url(${images[currImg].img})` }}
+    <CarouselBox>
+      <CarouselInner style={{ backgroundImage: `url(${images[currImg].img})` }}>
+        <Left
+          onClick={() => {
+            currImg > 0 ? setCurrImg(currImg - 1) : setCurrImg(4);
+          }}
         >
-          <Left
-            onClick={() => {
-              currImg > 0 ? setCurrImg(currImg - 1) : setCurrImg(4);
-            }}
-          >
-            <ArrowBackIos style={{ fontSize: "55px" }} />
-          </Left>
-          <Center></Center>
-          <Right
-            onClick={() => {
-              currImg < 4 ? setCurrImg(currImg + 1) : setCurrImg(0);
-            }}
-          >
-            <ArrowForwardIos style={{ color: "white", fontSize: "55px" }} />
-          </Right>
-        </CarouselInner>
-      </CarouselBox>
-    </CarouselContent>
+          <ArrowBackIos style={{ fontSize: "55px" }} />
+        </Left>
+        <Center></Center>
+        <Right
+          onClick={() => {
+            currImg < 4 ? setCurrImg(currImg + 1) : setCurrImg(0);
+          }}
+        >
+          <ArrowForwardIos style={{ color: "white", fontSize: "55px" }} />
+        </Right>
+      </CarouselInner>
+    </CarouselBox>
   );
 };
 
 export default Carousel;
 
-const CarouselContent = styled.div`
-  width: 100%;
-  height: 700vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`;
+// const CarouselContent = styled.div`
+//   width: 100%;
+//   height: 700vh;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+// `;
 
 const Left = styled.div`
   flex: 10%;
@@ -77,8 +73,9 @@ const Right = styled.div`
 `;
 
 const CarouselBox = styled.div`
-  width: 80%;
-  height: 100%;
+  width: 100%;
+  height: 700px;
+  margin-top: 10px;
 
   background-color: white;
   display: flex;
@@ -88,8 +85,7 @@ const CarouselBox = styled.div`
 const CarouselInner = styled.div`
   height: 100%;
   width: 100%;
-  /* background-repeat: no-repeat; */
   background: no-repeat center;
-  background-size: contain;
+  background-size: cover;
   display: flex;
 `;

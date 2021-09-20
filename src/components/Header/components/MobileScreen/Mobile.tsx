@@ -14,7 +14,7 @@ const Mobile = () => {
   const { isScroll, click, setClick } = useStateContext();
   return (
     <>
-      <HeaderMobile>
+      <HeaderMobile isScroll={isScroll} click isResize>
         <NavMobileContainer onClick={() => setClick(!click)}>
           {click ? (
             <FaTimes style={{ color: "white" }} />
@@ -32,19 +32,44 @@ const Mobile = () => {
               </Link>
             </LogoMobile>
           </NavMobileList>
-          <MobileItem activeClass="any" spy={true} to="/home">
+          <MobileItem
+            activeClass="any"
+            spy={true}
+            to="/home"
+            onClick={() => setClick(false)}
+          >
             Home
           </MobileItem>
-          <MobileItem activeClass="any" spy={true} to="/about">
+          <MobileItem
+            activeClass="any"
+            spy={true}
+            to="/about"
+            onClick={() => setClick(false)}
+          >
             About
           </MobileItem>
-          <MobileItem activeClass="any" spy={true} to="/skills">
+          <MobileItem
+            activeClass="any"
+            spy={true}
+            to="/skills"
+            onClick={() => setClick(false)}
+          >
             Skills
           </MobileItem>
-          <MobileItem activeClass="any" spy={true} to="/gallery">
+          <MobileItem
+            activeClass="any"
+            spy={true}
+            to="/gallery"
+            onClick={() => setClick(false)}
+          >
             Gallery
           </MobileItem>
-          <MobileItem activeClass="any" spy={true} to="/contact">
+          <MobileItem
+            activeClass="any"
+            spy={true}
+            to="/contact"
+            onClick={() => setClick(false)}
+          >
             Contact
           </MobileItem>
         </NavMobile>

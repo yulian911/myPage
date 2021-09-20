@@ -35,6 +35,7 @@ export const HeaderMobile = styled.div`
   display: flex;
   /* justify-content: flex-end; */
   transition: all 0.3s ease;
+  background: ${(props: IStyle) => (props.isScroll ? "crimson" : "black")};
 `;
 export const NavMobileContainer = styled.div`
   /* background-color: red; */

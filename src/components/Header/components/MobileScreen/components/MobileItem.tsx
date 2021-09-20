@@ -6,13 +6,19 @@ interface IProps {
   spy: boolean;
   to: string;
   children: React.ReactNode;
+  onClick(): void;
 }
 
-const MobileItem = ({ activeClass, spy, to, children }: IProps) => {
+const MobileItem = ({ activeClass, spy, to, children, onClick }: IProps) => {
   return (
     <>
       <NavMobileList>
-        <StyledLinkMobile activeClass={activeClass} spy={spy} to={to}>
+        <StyledLinkMobile
+          activeClass={activeClass}
+          spy={spy}
+          to={to}
+          onClick={onClick}
+        >
           {children}
         </StyledLinkMobile>
       </NavMobileList>
