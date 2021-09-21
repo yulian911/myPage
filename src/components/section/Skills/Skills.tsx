@@ -41,6 +41,7 @@ const Skills = ({ id }: IId) => {
 
         <BoxContainer height="50%">
           <LeftBox
+            justifyContent="center"
             style={{
               flexDirection: "column",
               padding: "10px 10px",

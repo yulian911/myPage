@@ -41,14 +41,14 @@ const Title = styled.div`
   justify-content: center;
   align-items: center;
   position: relative;
-  height: 150px;
+  height: 70px;
   /* background: yellow; */
   h2 {
     text-align: center;
     font-size: 40px;
     font-weight: 500;
     color: ${(props: IStyle) => props.color};
-    /* margin-bottom: 60px; */
+    margin-bottom: 20px;
     /* padding-bottom: 20px; */
     font-family: "Ubuntu", sans-serif;
     transform: translateX(-50%, -50%);

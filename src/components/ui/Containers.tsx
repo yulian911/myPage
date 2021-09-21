@@ -18,8 +18,8 @@ export const Container = styled.div`
 `;
 
 export const Content = styled.div`
-  width: 80%;
+  width: 100%;
+  width: 100%;
   display: flex;
   flex-direction: ${(props: IStyledContent) => props.direction};
 `;
-

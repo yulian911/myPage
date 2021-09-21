@@ -34,7 +34,7 @@ const About = ({ id }: IId) => {
           About
         </SectionTitle>
         <BoxContainer height="100%">
-          <LeftBox>
+          <LeftBox justifyContent="center">
             <Image src={Man} alt="man" width="80%" radius="15px" />
           </LeftBox>
           <RightBox>
