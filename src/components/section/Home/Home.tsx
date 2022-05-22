@@ -10,12 +10,11 @@ import ItemFour from "./../../../assets/plik4.png";
 import ImageModule from "../../ui/ImageModule";
 import { Link } from "react-scroll";
 import { FaChevronDown } from "react-icons/fa";
+import AppWrapper from '../../../HOC/AppWrapper'
 
-interface IId {
-  id: string;
-}
 
-const Home = ({ id }: IId) => {
+
+const Home = () => {
   const [isResize, setIsResize] = useState(true);
   const handleResize = () => {
     if (window.innerWidth >= 960) {
@@ -31,7 +30,7 @@ const Home = ({ id }: IId) => {
   });
 
   return (
-    <Container id={id} background="black" justifyContent="center">
+    <Container  background="black" justifyContent="center">
       <Content direction="row">
         <Welcome isResize={isResize}>
           <TextBox>
@@ -116,7 +115,7 @@ const Home = ({ id }: IId) => {
   );
 };
 
-export default Home;
+export default AppWrapper(Home,'/home','black');
 
 interface IStyle {
   isResize: boolean | null;

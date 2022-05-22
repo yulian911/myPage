@@ -1,5 +1,5 @@
 import React from "react";
-
+import AppWrapper from '../../../HOC/AppWrapper'
 import { Container, Content } from "../../ui/Containers";
 import Image from "../../ui/Image";
 
@@ -17,13 +17,12 @@ import { BoxContainer } from "../../ui/BoxContainer";
 import { LeftBox } from "../../ui/LeftBox";
 import { RightBox } from "../../ui/RightBox";
 
-interface IId {
-  id: string;
-}
 
-const About = ({ id }: IId) => {
+
+const About = () => {
+ 
   return (
-    <Container id={id} background="white" justifyContent="center">
+    <Container   background="white" justifyContent="center">
       <Content direction="column">
         <SectionTitle
           background="white"
@@ -62,4 +61,4 @@ const About = ({ id }: IId) => {
   );
 };
 
-export default About;
+export default AppWrapper(About,"/about",'white');

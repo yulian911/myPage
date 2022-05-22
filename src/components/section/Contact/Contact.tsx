@@ -13,14 +13,13 @@ import { SiMailDotRu } from "react-icons/si";
 import { FaCopyright } from "react-icons/fa";
 import Author from "./components/Author";
 import { Link } from "react-scroll";
+import AppWrapper from '../../../HOC/AppWrapper'
 
-interface IId {
-  id: string;
-}
 
-const Contact = ({ id }: IId) => {
+
+const Contact = () => {
   return (
-    <Container id={id} background="black" justifyContent="center">
+    <Container  background="black" justifyContent="center">
       <Content direction="column">
         <SectionTitle
           background="black"
@@ -94,7 +93,7 @@ const Contact = ({ id }: IId) => {
   );
 };
 
-export default Contact;
+export default AppWrapper(Contact ,'/contact','black');
 
 export const Footer = styled.div`
   width: 100%;

@@ -2,14 +2,12 @@ import React from "react";
 import Carousel from "../../ui/Carousel";
 import { Container, Content } from "../../ui/Containers";
 import SectionTitle from "../../ui/SectionTitle";
+import AppWrapper from '../../../HOC/AppWrapper'
 
-interface IId {
-  id: string;
-}
 
-const Gallery = ({ id }: IId) => {
+const Gallery = () => {
   return (
-    <Container id={id} background="white" justifyContent="center">
+    <Container background="white" justifyContent="center">
       <Content direction="column">
         <SectionTitle
           background="white"
@@ -25,4 +23,4 @@ const Gallery = ({ id }: IId) => {
   );
 };
 
-export default Gallery;
+export default AppWrapper(Gallery ,'/gallery' ,'white');

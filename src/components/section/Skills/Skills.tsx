@@ -9,14 +9,12 @@ import SectionTitle from "../../ui/SectionTitle";
 import LinearWithValueLabel from "./components/LinearWithValueLabel";
 import { Animation } from "./components/skillStyle";
 import Svg from "./components/Svg";
+import AppWrapper from "../../../HOC/AppWrapper";
 
-interface IId {
-  id: string;
-}
 
-const Skills = ({ id }: IId) => {
+const Skills = () => {
   return (
-    <Container id={id} background="black" justifyContent="center">
+    <Container  background="black" justifyContent="center">
       <Content direction="column">
         <SectionTitle
           background="black"
@@ -72,4 +70,4 @@ const Skills = ({ id }: IId) => {
   );
 };
 
-export default Skills;
+export default AppWrapper(Skills ,'/skills','black');

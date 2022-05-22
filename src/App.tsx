@@ -6,7 +6,7 @@ import About from "./components/section/About/About";
 import Skills from "./components/section/Skills/Skills";
 import Gallery from "./components/section/Gallery/Gallery";
 import Contact from "./components/section/Contact/Contact";
-import ScrollToTop from "./components/scrollToTop";
+import { Container, Content } from "./components/ui/Containers";
 
 function App() {
   return (
@@ -19,12 +19,14 @@ function App() {
       <Route path="/skills" component={Skills} />
       <Route path="/gallery" component={Gallery} />
       <Route path="/contact" component={Contact} /> */}
-
-      <Home id="/home" />
-      <About id="/about" />
-      <Skills id="/skills" />
-      <Gallery id="/gallery" />
-      <Contact id="/contact" />
+ {/* <Container  background="black" justifyContent="center"> */}
+    <Home />
+ {/* </Container> */}
+     
+      <About />
+      <Skills  />
+      <Gallery />
+      <Contact  />
     </>
   );
 }
